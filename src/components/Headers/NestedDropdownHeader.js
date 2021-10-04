@@ -1,12 +1,14 @@
-const NestedDropdownHeader = (nestedsubviews) => {
-  const nestedmenu = nestedsubviews.nestedsubviews.map((element, key) => (
+import React, { useState } from "react";
+
+const NestedDropdownHeader = (props) => {
+  const nestedmenu = props.nestedsubviews.map((element, key) => (
     <li key={key}>
       <a href="#">{element.nestedviewname}</a>
     </li>
   ));
   return (
     <>
-      <ul className="nestedContent yellow">{nestedmenu}</ul>
+      <ul className={"nestedContent yellow " + props.show} >{nestedmenu}</ul>
     </>
   );
 };

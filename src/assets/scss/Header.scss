@@ -7,6 +7,9 @@ header {
     display: flex;
     color: #fff;
   }
+  .SideNav {
+    display: none;
+  }
   .navMenu {
     display: flex;
     padding: 0;
@@ -122,4 +125,113 @@ header .navMenu .dropdownContent li:hover > .nestedContent {
   border-right-color: #383085;
   border-width: 10px;
   margin-top: -36px;
+}
+
+.bar {
+  display: block;
+  height: 5px;
+  width: 50px;
+  background-color: #383085;
+  margin: 10px auto;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.nav-right {
+  position: fixed;
+  right: 40px;
+  top: 20px;
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+.bar {
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.nav-right.visible-xs .active .bar {
+  background-color: #fff;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.button.true .top {
+  -webkit-transform: translateY(15px) rotateZ(45deg);
+  -moz-transform: translateY(15px) rotateZ(45deg);
+  -ms-transform: translateY(15px) rotateZ(45deg);
+  -o-transform: translateY(15px) rotateZ(45deg);
+  transform: translateY(15px) rotateZ(45deg);
+}
+
+.button.true .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+.button.true .middle {
+  width: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    .SideNav {
+      display: block;
+      text-align: right;
+      padding: 10px 20px;
+    }
+    .navMenu {
+      display: none;
+      li {
+        padding-bottom: 10px;
+      }
+      &.true {
+        display: block;
+      }
+      .dropdownContent {
+        display: none;
+        &.show {
+          display: block;
+          position: static;
+        }
+        &.hide {
+          display: none !important;
+        }
+      }
+    }
+  }
+  .dropdownContent:after,
+  .dropdownContent:before {
+    display: none;
+  }
+  header .navMenu .dropdownContent li:hover > .nestedContent {
+    right: 0;
+    left: 60%;
+    z-index: 2;
+  }
+  .nestedContent:after,
+  .nestedContent:before {
+    border-right-color: #fff;
+  }
 }
