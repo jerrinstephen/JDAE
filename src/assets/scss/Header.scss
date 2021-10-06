@@ -194,6 +194,44 @@ header .navMenu .dropdownContent li:hover > .nestedContent {
   width: 0;
 }
 
+.bilingualMenu {
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  li {
+    list-style: none;
+  }
+  .languages {
+    position: absolute;
+    z-index: 4;
+    bottom: 5px;
+    &.false {
+      display: none;
+    }
+    &.true {
+      display: block;
+    }
+    .dropdownContent {
+      background: #feed01;
+      border: 4px solid #feed01;
+      padding: 5px 10px 0;
+      &:before {
+        border-bottom-color: #feed01;
+        border-width: 7px;
+      }
+      &:after {
+        border-bottom-color: #feed01;
+        border-width: 7px;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   header {
     .SideNav {
@@ -233,5 +271,11 @@ header .navMenu .dropdownContent li:hover > .nestedContent {
   .nestedContent:after,
   .nestedContent:before {
     border-right-color: #fff;
+  }
+  .bilingualMenu {
+    .dropdownContent:after,
+    .dropdownContent:before {
+      display: block;
+    }
   }
 }

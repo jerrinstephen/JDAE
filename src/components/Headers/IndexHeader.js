@@ -1,5 +1,6 @@
 import "../../assets/scss/Header.scss";
 import Logo from "../../assets/images/Logo.PNG";
+import bilingual from "../../assets/images/bilingual.jpg";
 import DropdownHeader from "./DropdownHeader";
 import routes from "../../Header";
 import React, { useState } from "react";
@@ -7,6 +8,7 @@ import React, { useState } from "react";
 const Header = () => {
   const [activeElName, setActiveElName] = React.useState("");
   const [activeMenu, setActiveMenu] = React.useState(false);
+  const [activeBilingual, setActiveBilingual] = React.useState(false);
 
   const toggleElName = (e, viewname) => {
     e.stopPropagation();
@@ -32,6 +34,10 @@ const Header = () => {
     </li>
   ));
 
+  const enableBilingualMenu = () => {
+    setActiveBilingual(!activeBilingual);
+  };
+
   return (
     <>
       <div className="container">
@@ -43,11 +49,27 @@ const Header = () => {
               </a>
               JD ACADEMY OF EXCELLENCE
             </h2>
-            <ul className="bilingualMenu"></ul>
+            <ul className="bilingualMenu ">
+              <li>
+                <a href="#" onClick={enableBilingualMenu}>
+                  <img src={bilingual} alt="logo" className="logo" />
+                </a>
+              </li>
+              <li className={"languages " + activeBilingual}>
+                <ul className="dropdownContent">
+                  <li>
+                    <a href="#">English</a>
+                  </li>
+                  <li>
+                    <a href="#">தமிழ்</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
           <div className="yellow">
             <div className="SideNav" onClick={enableMenu}>
-              <div className={"button "  + activeMenu}  id="btn">
+              <div className={"button " + activeMenu} id="btn">
                 <div className="bar top"></div>
                 <div className="bar middle"></div>
                 <div className="bar bottom"></div>
