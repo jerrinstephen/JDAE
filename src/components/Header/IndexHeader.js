@@ -1,6 +1,6 @@
 import "../../assets/scss/Header.scss";
 import Logo from "../../assets/images/Logo.PNG";
-import bilingual from "../../assets/images/bilingual.jpg";
+import bilingual from "../../assets/images/bilingual.png";
 import DropdownHeader from "./DropdownHeader";
 import routes from "../../Header";
 import React, { useState } from "react";
@@ -8,7 +8,6 @@ import React, { useState } from "react";
 const Header = () => {
   const [activeElName, setActiveElName] = React.useState("");
   const [activeMenu, setActiveMenu] = React.useState(false);
-  const [activeBilingual, setActiveBilingual] = React.useState(false);
 
   const toggleElName = (e, viewname) => {
     e.stopPropagation();
@@ -21,7 +20,7 @@ const Header = () => {
   };
 
   const navmenu = routes.map((element, key) => (
-    <li key={key} onClick={(e) => toggleElName(e, element.viewname)}>
+    <li key={key} className='navmenuList' onClick={(e) => toggleElName(e, element.viewname)}>
       <a href="#">{element.viewname}</a>
       {element.subviews ? (
         <DropdownHeader
@@ -34,10 +33,6 @@ const Header = () => {
     </li>
   ));
 
-  const enableBilingualMenu = () => {
-    setActiveBilingual(!activeBilingual);
-  };
-
   return (
     <>
       <div className="container">
@@ -47,19 +42,18 @@ const Header = () => {
               <a href="#">
                 <img src={Logo} alt="logo" className="logo" />
               </a>
-              JD ACADEMY OF EXCELLENCE
+              <div>
+              <strong>JD ACADEMY OF EXCELLENCE</strong>
+              <p>A Unit of Arcdiocese of Madras Mylapore</p>
+                </div>
+              
             </h2>
             <ul className="bilingualMenu ">
               <li>
-                <a href="#" onClick={enableBilingualMenu}>
+                <a href="#">
                   <img src={bilingual} alt="logo" className="logo" />
                 </a>
-              </li>
-              <li className={"languages " + activeBilingual}>
-                <ul className="dropdownContent">
-                  <li>
-                    <a href="#">English</a>
-                  </li>
+                <ul className>
                   <li>
                     <a href="#">தமிழ்</a>
                   </li>
@@ -67,7 +61,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="yellow">
+          <div className="bg-header">
             <div className="SideNav" onClick={enableMenu}>
               <div className={"button " + activeMenu} id="btn">
                 <div className="bar top"></div>
