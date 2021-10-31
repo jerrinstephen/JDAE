@@ -20,7 +20,11 @@ const Header = () => {
   };
 
   const navmenu = routes.map((element, key) => (
-    <li key={key} className='navmenuList' onClick={(e) => toggleElName(e, element.viewname)}>
+    <li
+      key={key}
+      className="navmenuList"
+      onClick={(e) => toggleElName(e, element.viewname)}
+    >
       <a href="#">{element.viewname}</a>
       {element.subviews ? (
         <DropdownHeader
@@ -43,10 +47,9 @@ const Header = () => {
                 <img src={Logo} alt="logo" className="logo" />
               </a>
               <div>
-              <strong>JD ACADEMY OF EXCELLENCE</strong>
-              <p>A Unit of Arcdiocese of Madras Mylapore</p>
-                </div>
-              
+                <strong>JD ACADEMY OF EXCELLENCE</strong>
+                <p>A Unit of Arcdiocese of Madras Mylapore</p>
+              </div>
             </h2>
             <ul className="bilingualMenu ">
               <li>
@@ -68,6 +71,7 @@ const Header = () => {
                 <div className="bar middle"></div>
                 <div className="bar bottom"></div>
               </div>
+              <div><h4>Menu</h4></div>
             </div>
             <ul className={"navMenu " + activeMenu}>{navmenu}</ul>
           </div>

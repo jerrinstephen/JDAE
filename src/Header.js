@@ -66,7 +66,7 @@ const routes = [
         subviewname: "Entrepreneurship",
       },
       {
-        subviewname: "Research & Develipment",
+        subviewname: "Research & Development",
       },
     ],
   },

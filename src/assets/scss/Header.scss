@@ -9,6 +9,10 @@ header {
   }
   .SideNav {
     display: none;
+    h4 {
+      color: #312e40;
+      font-size: 16px;
+    }
   }
   ul {
     list-style: none;
@@ -30,7 +34,7 @@ header {
 
   ul li a {
     display: flex;
-    padding: 1em;
+    padding: 1em 0;
     text-decoration: none;
     white-space: nowrap;
     align-items: center;
@@ -83,7 +87,8 @@ header {
   .navMenu {
     li.navmenuList {
       a {
-        color: #000;
+        color: #312e40;
+        font-weight: 600;
       }
       &:hover {
         box-shadow: 2px 2px 5px 5px #9992d7;
@@ -181,17 +186,17 @@ header {
 
 .bar {
   display: block;
-  height: 5px;
-  width: 50px;
-  background-color: #383085;
-  margin: 10px auto;
+  height: 3px;
+  width: 30px;
+  background-color: #727180;
+  margin: 5px 0;
 }
 
 .button {
   cursor: pointer;
   display: inline-block;
   width: auto;
-  margin: 0 auto;
+  margin-right: 8px;
   -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
   -ms-transition: all 0.7s ease;
@@ -227,19 +232,19 @@ header {
 }
 
 .button.true .top {
-  -webkit-transform: translateY(15px) rotateZ(45deg);
-  -moz-transform: translateY(15px) rotateZ(45deg);
-  -ms-transform: translateY(15px) rotateZ(45deg);
-  -o-transform: translateY(15px) rotateZ(45deg);
-  transform: translateY(15px) rotateZ(45deg);
+  -webkit-transform: translateY(8px) rotateZ(45deg);
+  -moz-transform: translateY(8px) rotateZ(45deg);
+  -ms-transform: translateY(8px) rotateZ(45deg);
+  -o-transform: translateY(8px) rotateZ(45deg);
+  transform: translateY(8px) rotateZ(45deg);
 }
 
 .button.true .bottom {
-  -webkit-transform: translateY(-15px) rotateZ(-45deg);
-  -moz-transform: translateY(-15px) rotateZ(-45deg);
-  -ms-transform: translateY(-15px) rotateZ(-45deg);
-  -o-transform: translateY(-15px) rotateZ(-45deg);
-  transform: translateY(-15px) rotateZ(-45deg);
+  -webkit-transform: translateY(-8px) rotateZ(-45deg);
+  -moz-transform: translateY(-8px) rotateZ(-45deg);
+  -ms-transform: translateY(-8px) rotateZ(-45deg);
+  -o-transform: translateY(-8px) rotateZ(-45deg);
+  transform: translateY(-8px) rotateZ(-45deg);
 }
 
 .button.true .middle {
@@ -258,33 +263,68 @@ header {
       border-radius: 2px;
       box-shadow: 2px 2px 5px 5px #7e393a;
       z-index: 1;
-      a{
+      a {
         padding: 5px 10px;
       }
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 968px) {
   header {
+    .bg-header {
+      padding: 0 20px;
+    }
     .SideNav {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: right;
-      padding: 10px 20px;
     }
     .navMenu {
       display: none;
       li {
         padding-bottom: 10px;
+        width: 100%;
+        &:hover > ul {
+          position: static;
+        }
+      }
+      li.navmenuList {
+        a {
+          display: block;
+          padding: 1rem 0;
+          width: 100%;
+          text-align: center;
+        }
+        &:hover {
+          box-shadow: none;
+        }
+        &:hover > a {
+          text-decoration: underline;
+          color: #6d2891;
+        }
       }
       &.true {
-        display: block;
+        display: flex;
+        flex-direction: column;
       }
       .dropdownContent {
         display: none;
+        z-index: 4;
+        li {
+          &:hover {
+            box-shadow: none;
+          }
+          &:hover > a {
+            text-decoration: underline;
+          }
+        }
         &.show {
           display: block;
           position: static;
+          border-top: 3px solid #b9b9bd;
+          border-bottom: 3px solid #b9b9bd;
         }
         &.hide {
           display: none !important;
@@ -306,9 +346,19 @@ header {
     border-right-color: #fff;
   }
   .bilingualMenu {
-    .dropdownContent:after,
-    .dropdownContent:before {
-      display: block;
+    display: none;
+  }
+  .logoDiv {
+    img.logo {
+      height: 60px;
+    }
+    h2 {
+      strong {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+      }
     }
   }
 }

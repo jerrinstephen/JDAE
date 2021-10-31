@@ -41,7 +41,7 @@ const Footer = () => {
               </li>
             </ul>
           </li>
-          <li>
+          <li className="map">
             <h6>Locate Us</h6>
             <ul>
               <li>
@@ -89,8 +89,14 @@ const Footer = () => {
                 <a href="#">
                   <img src={youtube} alt="" />
                 </a>
+                <a href="#" className="reshtml">
+                  <img src={twittter} alt="" />
+                </a>
+                <a href="#" className="reshtml">
+                  <img src={chat} alt="" />
+                </a>
               </li>
-              <li>
+              <li className="reshtml">
                 <a href="#">
                   <img src={twittter} alt="" />
                 </a>
@@ -102,9 +108,9 @@ const Footer = () => {
           </li>
         </ul>
         <p className="copyright">
-          Copyright (c) JD Academy of Excellence 2021 All Rights Reserved ::
-          with &nbsp;<span className="heart"> &hearts; </span>&nbsp; developed
-          by JDAE Tech Wing
+          <p>Copyright (c) JD Academy of Excellence</p><p> 2021 All Rights Reserved</p><p> ::
+          with <span className="heart"> &hearts; </span> developed
+          by <a href="#">JDAE Tech Wing</a></p>
         </p>
       </div>
     </>
