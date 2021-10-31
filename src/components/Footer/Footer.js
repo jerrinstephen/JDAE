@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "../../assets/scss/Footer.scss";
 import Address from "../../assets/images/address.png";
@@ -9,7 +10,7 @@ import chat from "../../assets/images/chat.png";
 import pinterest from "../../assets/images/pinterest.png";
 import facebook from "../../assets/images/facebook.png";
 import location from "../../assets/images/location.png";
-import button from "../../assets/images/button.png";
+//import button from "../../assets/images/button.png";
 
 const Footer = () => {
   return (
