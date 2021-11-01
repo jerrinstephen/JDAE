@@ -9,9 +9,9 @@ import chat from "../../assets/images/chat.png";
 import pinterest from "../../assets/images/pinterest.png";
 import facebook from "../../assets/images/facebook.png";
 import location from "../../assets/images/location.png";
-import button from "../../assets/images/button.png";
 
 const Footer = () => {
+
   return (
     <>
       <div className="footer blue">
@@ -24,7 +24,7 @@ const Footer = () => {
                 <div>
                   <p>JD Academy of Excellence</p>
                   <p> Santhome High Road </p>Chennai - 600 004
-                </div>  
+                </div>
               </li>
               <li>
                 <img src={Contact} alt="" />
@@ -45,10 +45,9 @@ const Footer = () => {
             <h6>Locate Us</h6>
             <ul>
               <li>
-                  <img src={location} alt='location' />
+                <img src={location} alt="location" />
               </li>
               <li>
-
               </li>
             </ul>
           </li>
@@ -71,7 +70,7 @@ const Footer = () => {
                 <label>Course</label>
                 <input type="text" />
               </div>
-              <div className='button'>
+              <div className="button">
                 <button>Join Now</button>
               </div>
             </form>
@@ -108,9 +107,13 @@ const Footer = () => {
           </li>
         </ul>
         <p className="copyright">
-          <p>Copyright (c) JD Academy of Excellence</p><p> 2021 All Rights Reserved</p><p> ::
-          with <span className="heart"> &hearts; </span> developed
-          by <a href="#">JDAE Tech Wing</a></p>
+          <p>Copyright (c) JD Academy of Excellence</p>
+          <p> 2021 All Rights Reserved</p>
+          <p>
+            {" "}
+            :: with <span className="heart"> &hearts; </span> developed by{" "}
+            <a href="#">JDAE Tech Wing</a>
+          </p>
         </p>
       </div>
     </>

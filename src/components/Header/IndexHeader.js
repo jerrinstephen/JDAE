@@ -3,7 +3,7 @@ import Logo from "../../assets/images/Logo.PNG";
 import bilingual from "../../assets/images/bilingual.png";
 import DropdownHeader from "./DropdownHeader";
 import routes from "../../Header";
-import React, { useState } from "react";
+import React from "react";
 
 const Header = () => {
   const [activeElName, setActiveElName] = React.useState("");
