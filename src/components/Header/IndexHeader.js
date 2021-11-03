@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "../../assets/scss/Header.scss";
 import Logo from "../../assets/images/Logo.PNG";
 import bilingual from "../../assets/images/bilingual.png";

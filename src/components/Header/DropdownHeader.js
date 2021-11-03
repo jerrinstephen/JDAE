@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import NestedDropdownHeader from "./NestedDropdownHeader";
 import React from "react";
 import hovermenu from "../../assets/images/hovermenu.png";
