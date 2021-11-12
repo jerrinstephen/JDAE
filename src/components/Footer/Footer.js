@@ -43,7 +43,7 @@ const Footer = () => {
               </li>
             </ul>
           </li>
-          <li className="map">
+          {/* <li className="map">
             <h6>Locate Us</h6>
             <ul>
               <li>
@@ -52,7 +52,7 @@ const Footer = () => {
               <li>
               </li>
             </ul>
-          </li>
+          </li> */}
           <li>
             <h6>Join with Us</h6>
             <form>
@@ -109,11 +109,10 @@ const Footer = () => {
           </li>
         </ul>
         <p className="copyright">
-          <p>Copyright (c) JD Academy of Excellence</p>
-          <p> 2021 All Rights Reserved</p>
+          <p>Copyright (c) JD Academy of Excellence&nbsp;</p>
+          <p>2021 All Rights Reserved</p>
           <p>
-            {" "}
-            :: with <span className="heart"> &hearts; </span> developed by{" "}
+            &nbsp;:: with <span className="heart"> &hearts; </span> developed by{" "}
             <a href="#">JDAE Tech Wing</a>
           </p>
         </p>
