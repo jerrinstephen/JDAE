@@ -63,33 +63,39 @@ const Home = () => {
         </div>
         <div>
           <h2>Objectives:</h2>
-          <ul>
-            <li>
+          <ul className="objectives">
+            <li className="left">
+              <span>1</span>
               To build and enrich Knowledge, Attitude, Skills and Values (KASV)
               as the core foundation at the school level.
             </li>
-            <li>
+            <li className="right">
               To promote the academic competency of the learners through
               innovative and creative teaching and learning process.
+              <span>2</span>
             </li>
-            <li>
+            <li className="left">
+              <span>3</span>
               To offer professional coaching for all exams, such as JEE, NEET,
               CA, UPSC, TNPSC, SSC, IBPS, NET, SET, TET, GRE, TOEFL, IELTS and
               more.
             </li>
-            <li>
+            <li className="right">
               To prepare young aspirants in professional careers through courses
               in the schools of Journalism, Corporate Law, Counselling,
               Languages, Data Science, Artificial Intelligence (AI), Machine
               Learning (ML), and such others.
+              <span>4</span>
             </li>
-            <li>
+            <li className="left">
+              <span>5</span>
               To train and develop Entrepreneurs in Small Scall Businesses and
               Industries.
             </li>
-            <li>
+            <li className="right">
               To undertake research and development - oriented programmes and
               projects in socio-economic and anthropological studies.
+              <span>6</span>
             </li>
           </ul>
         </div>

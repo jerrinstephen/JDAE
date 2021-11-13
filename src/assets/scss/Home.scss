@@ -3,7 +3,7 @@
   padding-bottom: 20px;
   padding: 10px 20px;
   margin: 20px 0;
-  h2{
+  h2 {
     color: #383085;
   }
   .goalMotto {
@@ -13,33 +13,55 @@
 }
 .HomeContainer {
   padding: 20px 70px;
-  background: #F2F1FA;
-  h2{
+  background: #dbdae0;
+  color: #312e40;
+  h2 {
     color: #383085;
   }
-  .slick-prev, .slick-next{
+  .slick-prev,
+  .slick-next {
     background: #383085;
-    &:hover{
+    &:hover {
       background: #383085;
     }
-    &:focus{
+    &:focus {
       background: #383085;
     }
   }
-  .sliderImg{
-    height:350px;
+  .sliderImg {
+    height: 350px;
   }
   .johnDemonte {
     display: flex;
     div {
       line-height: 2;
     }
-    .johnDemonteImg{
+    .johnDemonteImg {
       width: 500px;
       img {
         height: 200px;
         width: 80%;
       }
+    }
+  }
+  .objectives {
+    list-style-type: none;
+    li {
+      display: flex;
+      align-items: start;
+      padding-bottom: 20px;
+      span {
+        color: #383085;
+        font-weight: bold;
+      }
+    }
+    .left {
+      margin-right: 50%;
+      text-align: right;
+    }
+    .right {
+      margin-left: 50%;
+      text-align: left;
     }
   }
 }
