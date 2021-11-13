@@ -1,21 +1,30 @@
 import React from "react";
 import "../../assets/scss/Home.scss";
+import johnDemonte from "../../assets/images/JohnDemonte.jpg";
+import slide1 from "../../assets/images/SliderPic1.jpg";
+import slide2 from "../../assets/images/SliderPic2.jpg";
+import slide3 from "../../assets/images/SliderPic3.jfif";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
+  const settings = {
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <>
       <div className="HomeContainer">
+        <Slider {...settings}>
+          <img className="sliderImg" src={slide1} alt="slide1img" />
+          <img className="sliderImg" src={slide2} alt="slide2img" />
+          <img className="sliderImg" src={slide3} alt="slide3img" />
+        </Slider>
         <div className="setgoals">
-          <div className="goalMotto">
-            <div className="Motto">
-              <h2>Motto:</h2>
-              <p>Skillful and Ethical Leadership For Good Governance</p>
-            </div>
-            <div className="Vision">
-              <h2>Vision:</h2>
-              <p>Humanistic Society based on Fraternity, Justice and Peace</p>
-            </div>
-          </div>
           <div className="goalMission">
             <div className="Mission">
               <h2>Mission:</h2>
@@ -26,8 +35,21 @@ const Home = () => {
               </p>
             </div>
           </div>
+          <div className="goalMotto">
+            <div className="Motto">
+              <h2>Motto:</h2>
+              <p>Skillful and Ethical Leadership For Good Governance</p>
+            </div>
+            <div className="Vision">
+              <h2>Vision:</h2>
+              <p>Humanistic Society based on Fraternity, Justice and Peace</p>
+            </div>
+          </div>
         </div>
-        <div>
+        <div className="johnDemonte">
+          <div className="johnDemonteImg">
+            <img src={johnDemonte} alt="Sir John Demonte" />
+          </div>
           <div>
             <strong>Sir John DeMonte</strong> was an incomparable philanthropist
             of the 19 th century and the biggest benefactor of the Archdiocese

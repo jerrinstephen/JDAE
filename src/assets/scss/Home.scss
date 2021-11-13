@@ -1,11 +1,45 @@
 .setgoals {
   text-align: center;
   padding-bottom: 20px;
+  padding: 10px 20px;
+  margin: 20px 0;
+  h2{
+    color: #383085;
+  }
   .goalMotto {
     display: flex;
     justify-content: space-between;
   }
 }
-.HomeContainer{
-    padding:20px 30px;
+.HomeContainer {
+  padding: 20px 70px;
+  background: #F2F1FA;
+  h2{
+    color: #383085;
+  }
+  .slick-prev, .slick-next{
+    background: #383085;
+    &:hover{
+      background: #383085;
+    }
+    &:focus{
+      background: #383085;
+    }
+  }
+  .sliderImg{
+    height:350px;
+  }
+  .johnDemonte {
+    display: flex;
+    div {
+      line-height: 2;
+    }
+    .johnDemonteImg{
+      width: 500px;
+      img {
+        height: 200px;
+        width: 80%;
+      }
+    }
+  }
 }
